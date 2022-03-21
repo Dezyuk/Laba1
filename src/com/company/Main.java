@@ -56,7 +56,27 @@ public class Main {
             }
         }
     }
+    //Индийский математик С. Рамануджан обратил внимание на то, что число 1729 можно представить в виде суммы кубов двух чисел двумя способами. Найдите эти числа.
     private static void task141(){
-
+        System.out.println("Числа котопые в кубе в суме дают число 1729 : ");
+        int i=0,count =0;
+        while (true){
+            i++;
+            if(Math.pow(i,3)>1729||count==2){
+                break;
+            }
+            int j=0;
+            while (true){
+                j++;
+                if((Math.pow(i,3)+Math.pow(j,3))>1729){
+                    break;
+                }
+                if((Math.pow(i,3)+Math.pow(j,3))==1729){
+                    System.out.println(i+"-"+j);
+                    count++;
+                    break;
+                }
+            }
+        }
     }
 }
